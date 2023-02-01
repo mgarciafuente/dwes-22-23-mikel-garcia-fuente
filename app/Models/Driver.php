@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Driver extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nombre',
+        'apellidos',
+        'valoracion',
+        'kilometros',
+    ];
 }
