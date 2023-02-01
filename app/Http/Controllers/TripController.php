@@ -27,7 +27,7 @@ class TripController extends Controller
         $num_plazas = $validatedData['num_plazas'];
 
         if($trip->plazas > $num_plazas) {
-            $user->trips()->attach($trip, ['num_plazas' => $num_plazas]);
+            $user->trips()->attach($trip->id, ['num_plazas' => $num_plazas]);
             return redirect('/');
         }
 

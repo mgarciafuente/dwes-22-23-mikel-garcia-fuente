@@ -13,7 +13,7 @@ class CreateUsersTripTable extends Migration
      */
     public function up()
     {
-        Schema::create('users_trip', function (Blueprint $table) {
+        Schema::create('trip_user', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->foreignId('user_id')->constrained();
