@@ -20,3 +20,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/viajes-disponibles', [App\Http\Controllers\TripController::class, 'available'])->name('viajes-disponibles');
+
+Route::post('/reservar/{trip}/{user}', [App\Http\Controllers\TripController::class, 'reservar'])->name('reservar');
+

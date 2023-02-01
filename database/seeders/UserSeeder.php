@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'nombre' => "admin",
+            'name' => "admin",
             'email' => "admin@zubirimanteo.com",
             'password' => bcrypt("password"),
         ]);
@@ -37,11 +37,11 @@ class UserSeeder extends Seeder
             $gender = $genders[$randomName % 2];
             DB::table('users')->insert([
                 'nif' => random_int(11111111, 99999999) . chr(rand(65,90)),
-                'nombre' => $firstNames[$randomName],
-                'apellido' => $lastnames[$randomLastName],
-                'telefono' => random_int(610000000, 699999999),
-                'fecha_nacimiento' => Carbon::today()->subDays(rand(-200, 365)),
-                'genero' => $gender,
+                'name' => $firstNames[$randomName],
+                'lastname' => $lastnames[$randomLastName],
+                'phone' => random_int(610000000, 699999999),
+                'date_of_birth' => Carbon::today()->subDays(rand(-200, 365)),
+                'gender' => $gender,
                 'email' => $firstNames[$randomName] . $lastnames[$randomLastName] . $i . "@zubirimanteo.com",
                 'password' => bcrypt("password"),
             ]);
