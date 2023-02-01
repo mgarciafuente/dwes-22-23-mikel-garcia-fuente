@@ -16,4 +16,12 @@ class Trip extends Model
         'fecha',
         'phone',
     ];
+
+    public function users() {
+        return $this->belongsToMany('App\Models\User');
+    }
+
+    public function driver() {
+        return $this->belongsTo('App\Models\Driver');
+    }
 }

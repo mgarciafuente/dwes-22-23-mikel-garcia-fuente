@@ -15,4 +15,8 @@ class Driver extends Model
         'valoracion',
         'kilometros',
     ];
+
+    public function trips() {
+        return $this->hasMany('App\Models\Trip');
+    }
 }

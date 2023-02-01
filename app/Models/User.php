@@ -27,6 +27,10 @@ class User extends Authenticatable
         'gender',
     ];
 
+    public function trips() {
+        return $this->belongsToMany('App\Models\Trip');
+    }
+
 
     /**
      * The attributes that should be hidden for arrays.
